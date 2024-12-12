@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/signUp&SignIn/otp_screen.dart';
 import 'package:myapp/signUp&SignIn/signin_screen.dart';
 
 class SignUp extends StatefulWidget {
@@ -74,6 +75,7 @@ class _SignUpState extends State<SignUp> {
                             ),
                             child: 
                               const TextField(
+                                style: TextStyle(color: Colors.white),
                                 decoration: InputDecoration(
                                   contentPadding:
                                       EdgeInsets.symmetric(horizontal: 10),
@@ -81,6 +83,7 @@ class _SignUpState extends State<SignUp> {
                                   enabledBorder: InputBorder.none,
                                   focusedBorder: InputBorder.none,
                                   hintText: 'First Name',
+                                  hintStyle: TextStyle(color: Colors.grey),
                                 ),
                               ),
                           ),
@@ -105,6 +108,7 @@ class _SignUpState extends State<SignUp> {
                             ),
                             child: 
                               const TextField(
+                                style: TextStyle(color: Colors.white),
                                 decoration: InputDecoration(
                                   contentPadding:
                                       EdgeInsets.symmetric(horizontal: 10),
@@ -112,6 +116,7 @@ class _SignUpState extends State<SignUp> {
                                   enabledBorder: InputBorder.none,
                                   focusedBorder: InputBorder.none,
                                   hintText: 'Last Name',
+                                  hintStyle: TextStyle(color: Colors.grey),
                                 ),
                               ),
                           ),
@@ -136,6 +141,7 @@ class _SignUpState extends State<SignUp> {
                             ),
                             child: 
                               const TextField(
+                                style: TextStyle(color: Colors.white),
                                 decoration: InputDecoration(
                                   contentPadding:
                                       EdgeInsets.symmetric(horizontal: 10),
@@ -143,6 +149,7 @@ class _SignUpState extends State<SignUp> {
                                   enabledBorder: InputBorder.none,
                                   focusedBorder: InputBorder.none,
                                   hintText: 'Email',
+                                  hintStyle: TextStyle(color: Colors.grey),
                                 ),
                               ),
                           ),
@@ -167,6 +174,7 @@ class _SignUpState extends State<SignUp> {
                             ),
                             child: 
                               const TextField(
+                                style: TextStyle(color: Colors.white),
                                 obscureText: true,
                                 decoration: InputDecoration(
                                   contentPadding:
@@ -175,6 +183,7 @@ class _SignUpState extends State<SignUp> {
                                   enabledBorder: InputBorder.none,
                                   focusedBorder: InputBorder.none,
                                   hintText: 'Password',
+                                  hintStyle: TextStyle(color: Colors.grey),
                                 ),
                               ),
                           ),
@@ -191,7 +200,7 @@ class _SignUpState extends State<SignUp> {
 
       //Button
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.only(bottom: 20.0),
+        padding: const EdgeInsets.only(bottom: 20.0, top: 15),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
@@ -200,14 +209,19 @@ class _SignUpState extends State<SignUp> {
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   padding: const EdgeInsets.symmetric(
-                      horizontal: 130, vertical: 10),
+                      horizontal: 130, vertical: 15),
                   backgroundColor: const Color(0xFF18202E),
                   foregroundColor: Colors.white,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(5),
+                    borderRadius: BorderRadius.circular(10),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const OTPPage()),
+                    );
+                },
                 child: const Text(
                   "Sign Up",
                   style: TextStyle(

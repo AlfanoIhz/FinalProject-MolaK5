@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/main/home.dart';
-import 'package:myapp/signUp&SignIn/otp_screen.dart';
+import 'package:myapp/navigation_menu.dart';
 import 'package:myapp/signUp&SignIn/signup.dart';
 
 class SignIn extends StatefulWidget {
@@ -65,6 +65,7 @@ class _SignInState extends State<SignIn> {
                           ),
                           child: 
                             const TextField(
+                              style: TextStyle(color: Colors.white),
                               decoration: InputDecoration(
                                 contentPadding:
                                     EdgeInsets.symmetric(horizontal: 10),
@@ -72,6 +73,7 @@ class _SignInState extends State<SignIn> {
                                 enabledBorder: InputBorder.none,
                                 focusedBorder: InputBorder.none,
                                 hintText: 'Email',
+                                hintStyle: TextStyle(color: Colors.grey),
                               ),
                             ),
                         ),
@@ -97,6 +99,7 @@ class _SignInState extends State<SignIn> {
                           ),
                           child: 
                             const TextField(
+                              style: TextStyle(color: Colors.white),
                               obscureText: true,
                               decoration: InputDecoration(
                                 contentPadding:
@@ -105,6 +108,7 @@ class _SignInState extends State<SignIn> {
                                 enabledBorder: InputBorder.none,
                                 focusedBorder: InputBorder.none,
                                 hintText: 'Phone Number',
+                                hintStyle: TextStyle(color: Colors.grey),
                               ),
                             ),
                         ),
@@ -161,6 +165,7 @@ class _SignInState extends State<SignIn> {
                             ),
                             child: const Icon(
                               Icons.facebook,
+                              color: Colors.blue,
                               size: 40,
                             ),
                           ),
@@ -197,6 +202,7 @@ class _SignInState extends State<SignIn> {
           ),
         ),
       ),
+
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.only(bottom: 20.0),
         child: Column(
@@ -207,15 +213,15 @@ class _SignInState extends State<SignIn> {
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   padding: const EdgeInsets.symmetric(
-                      horizontal: 130, vertical: 10),
+                      horizontal: 130, vertical: 15),
                   backgroundColor: const Color(0xFF18202E),
                   foregroundColor: Colors.white,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(5),
+                    borderRadius: BorderRadius.circular(10),
                   ),
                 ),
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => const OTPPage()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const NavigationMenu()));
                 },
                 child: const Text(
                   "Sign In",

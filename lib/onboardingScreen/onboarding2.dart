@@ -33,12 +33,12 @@ class _Onboarding2State extends State<Onboarding2> {
                   ),
                 ),
                 const Spacer(),
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 30.0),
+                Padding(
+                  padding: const EdgeInsets.only(left: 30.0, right: 30.0, bottom: 30),  
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text(
+                      const Text(
                         "Beauty parlour\nat your home",
                         textAlign: TextAlign.center,
                         style: TextStyle(
@@ -47,8 +47,8 @@ class _Onboarding2State extends State<Onboarding2> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(height: 16.0),
-                      Text(
+                      const SizedBox(height: 16.0),
+                      const Text(
                         "Lorem ipsum is a placeholder text commonly\nused to demonstrate the visual.",
                         textAlign: TextAlign.center,
                         style: TextStyle(
@@ -56,30 +56,29 @@ class _Onboarding2State extends State<Onboarding2> {
                           fontSize: 14.0,
                         ),
                       ),
+                      const SizedBox(height: 20,),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(builder: (context) => const Onboarding3()),
+                          ); // Menuju Onboarding2
+                        },
+                        child: Container(
+                          padding: const EdgeInsets.all(12),
+                          decoration: const BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.purple,
+                          ),
+                          child: const Icon(
+                            Icons.arrow_forward,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
-                const SizedBox(height: 20),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(builder: (context) => const Onboarding3()),
-                    ); // Menuju Onboarding3
-                  },
-                  child: Container(
-                    padding: const EdgeInsets.all(12),
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.purple,
-                    ),
-                    child: const Icon(
-                      Icons.arrow_forward,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 50),
               ],
             ),
           ),

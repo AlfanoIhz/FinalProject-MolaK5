@@ -29,10 +29,12 @@ class _OTPPageState extends State<OTPPage> {
             ),
             const SizedBox(height: 20),
             TextField(
+              style: const TextStyle(color: Colors.white),
               controller: otpController,
               keyboardType: TextInputType.number,
               decoration: const InputDecoration(
                 hintText: 'Enter OTP',
+                hintStyle: TextStyle(color: Colors.grey),
               ),
             ),
             const SizedBox(height: 40),

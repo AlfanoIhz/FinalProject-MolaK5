@@ -90,7 +90,7 @@ class _PropertyTypeButton extends StatelessWidget {
   final String label;
   final bool selected;
 
-  const _PropertyTypeButton({required this.label, required this.selected, super.key});
+  const _PropertyTypeButton({required this.label, required this.selected});
 
   @override
   Widget build(BuildContext context) {
