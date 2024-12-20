@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/navigation_menu.dart';
 
 class ServiceDetailsPage extends StatelessWidget {
   const ServiceDetailsPage({super.key});
@@ -6,9 +7,16 @@ class ServiceDetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 15, 24, 43),
       appBar: AppBar(
-        title: const Text('AC Regular Service'),
-        backgroundColor: const Color(0xFF181A20),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        title: const Text('AC Regular Service', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16)),
+        backgroundColor: const Color.fromARGB(255, 15, 24, 43),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),
@@ -49,17 +57,21 @@ class ServiceDetailsPage extends StatelessWidget {
             ),
             const Spacer(),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => const NavigationMenu()),
+                );
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blue,
                 minimumSize: const Size(double.infinity, 50),
               ),
-               child: const Text('Book Now'),
+               child: const Text('Book Now', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16)),
             ),
           ],
         ),
       ),
-      backgroundColor: const Color(0xFF181A20),
     );
   }
 

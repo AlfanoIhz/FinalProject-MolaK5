@@ -14,9 +14,16 @@ class _OTPPageState extends State<OTPPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 15, 24, 43),
       appBar: AppBar(
-        title: const Text('Enter OTP'),
-        backgroundColor: Colors.black,
+        backgroundColor: const Color.fromARGB(255, 15, 24, 43),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        title: const Text('Enter OTP', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -51,7 +58,6 @@ class _OTPPageState extends State<OTPPage> {
           ],
         ),
       ),
-      backgroundColor: Colors.black,
     );
   }
 }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/main/home.dart';
 import 'package:myapp/navigation_menu.dart';
 import 'package:myapp/signUp&SignIn/signup.dart';
 
@@ -132,7 +131,7 @@ class _SignInState extends State<SignIn> {
                           onTap: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => const HomeScreen()),
+                              MaterialPageRoute(builder: (context) => const NavigationMenu()),
                             );
                           },
                           child: Container(
@@ -153,7 +152,7 @@ class _SignInState extends State<SignIn> {
                           onTap: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => const HomeScreen()),
+                              MaterialPageRoute(builder: (context) => const NavigationMenu()),
                             );
                           },
                           child: Container(
@@ -176,7 +175,7 @@ class _SignInState extends State<SignIn> {
                           onTap: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => const HomeScreen()),
+                              MaterialPageRoute(builder: (context) => const NavigationMenu()),
                             );
                           },
                           child: Container(

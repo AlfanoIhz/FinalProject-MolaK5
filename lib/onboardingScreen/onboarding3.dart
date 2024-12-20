@@ -12,7 +12,7 @@ class _Onboarding3State extends State<Onboarding3> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 15, 22, 33),
+      backgroundColor: const Color.fromARGB(255, 15, 24, 43),
       body: Stack(
         children: [
           SafeArea(

@@ -6,9 +6,10 @@ class BookingsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 15, 22, 33),
       appBar: AppBar(
         title: const Text('Bookings', style: TextStyle(color: Colors.white)),
-        backgroundColor: const Color(0xFF181A20),
+        backgroundColor: const Color.fromARGB(255, 15, 24, 43),
         elevation: 0,
       ),
       body: Padding(
@@ -28,7 +29,7 @@ class BookingsPage extends StatelessWidget {
               child: ListView(
                 children: const [
                   BookingCard(
-                    serviceName: 'AC Installation',
+                    serviceName: 'AC Service',
                     referenceCode: '#D-571224',
                     status: 'Confirmed',
                     statusColor: Colors.green,
@@ -59,7 +60,6 @@ class BookingsPage extends StatelessWidget {
           ],
         ),
       ),
-      backgroundColor: const Color(0xFF181A20),
     );
   }
 }
@@ -108,7 +108,7 @@ class BookingCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: const Color(0xFF242731),
+        color: const Color.fromARGB(255, 34, 52, 83),
         borderRadius: BorderRadius.circular(12),
       ),
       child: Column(
